@@ -1,0 +1,67 @@
+# Google Flow 이미지 프롬프트. 실제 입력 = style_prefix.txt + " " + prompt
+# 채택한 결과는 images/{id}.jpg (Flow 2K 다운로드) 로 저장
+- id: p00_cover
+  slide: 표지
+  prompt: >-
+    A cute small robot arm and a friendly wheeled robot on a workbench, glowing yellow electric current
+    flowing through cables from a battery into the robots, small sparks of light, cinematic depth of field,
+    keep the left 40% of the frame mostly empty dark navy space for a title.
+  adopted: true
+- id: p01_atom
+  slide: 모든 물질은 원자로 되어 있다
+  prompt: >-
+    A single atom shown simply: a glowing nucleus made of a cluster of warm orange and soft gray spheres in the
+    center, small glowing electric-blue electrons orbiting on thin elliptical light paths, centered, minimal.
+  adopted: true
+- id: p01_water_pipe
+  slide: 물로 생각하면 쉽다 (전기회로 비유)
+  prompt: >-
+    A closed loop of transparent glass pipe filled with blue water flowing in one direction, a small water pump
+    on the left side pushing the water, a small water wheel on the right side spinning from the flow,
+    glowing motion streaks showing the flow direction, clean side view.
+  adopted: true
+
+# ── v2: 참고교안(전기전자기초[1]) 1~5장 기반 ──
+- id: p01_effect_heat
+  slide: 전류의 작용 ① 열
+  prompt: >-
+    A glowing incandescent light bulb next to a small electric heater with glowing orange coils,
+    warm heat glow, centered, simple.
+  adopted: true
+- id: p01_effect_magnet
+  slide: 전류의 작용 ② 자기
+  prompt: >-
+    An electromagnet: a copper wire coil wrapped around an iron nail connected to a battery, attracting small
+    metal paper clips, faint blue magnetic field lines, a small electric motor beside it, centered, simple.
+  adopted: true
+- id: p01_effect_chem
+  slide: 전류의 작용 ③ 화학
+  prompt: >-
+    A glass beaker of liquid with two metal electrodes connected by wires to a battery, tiny bubbles rising from
+    the electrodes, next to a rechargeable battery being charged, centered, simple.
+  adopted: true
+- id: p01_water_tank
+  slide: 전압 = 높이 차
+  prompt: >-
+    Two water tanks side by side connected at the bottom by a transparent pipe, the left tank is placed high on a
+    tall stand and full of blue water, the right tank sits low and is nearly empty, water flowing strongly through
+    the pipe from the high tank to the low tank with glowing flow streaks, clear side view showing the height difference.
+  adopted: true
+- id: p01_conductor
+  slide: 도체
+  prompt: >-
+    A coil of shiny copper wire with a few silver, gold and aluminum metal pieces, glowing electric current flowing
+    easily through the copper, centered, simple.
+  adopted: true
+- id: p01_insulator
+  slide: 절연체
+  prompt: >-
+    Rubber gloves, a glass insulator and a plastic-coated cable cut open showing the plastic sheath, an electric spark
+    stopping at the rubber, centered, simple.
+  adopted: true
+- id: p01_semiconductor
+  slide: 반도체
+  prompt: >-
+    A shiny silicon wafer, a small computer chip, a single LED and a transistor component, subtle blue glow,
+    centered, simple.
+  adopted: true

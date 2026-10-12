@@ -1,0 +1,3 @@
+.venv/
+visuals/manim/_media/
+__pycache__/

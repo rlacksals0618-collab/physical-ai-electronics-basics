@@ -1,0 +1,80 @@
+# 1장 「전압과 전류」 — 맛보기 v2 (참고: 전기전자기초[1] 교안 1~5쪽을 비전공자용으로 재구성)
+# layout: cover | section | figure_caption | video_caption | compare | concept | three_cards
+
+- layout: cover
+  title: 전자 기초 이론
+  subtitle: 1장. 전압 · 전류 · 저항
+  meta: 청년 피지컬 AI · 비전공자를 위한 그림으로 보는 전자전기
+  visual: flow/p00_cover
+  notes: |
+    오늘 1장에서 다룰 세 단어: 전류, 전압, 저항. 이 셋만 알면 아두이노 회로의 절반은 읽을 수 있다.
+    (참고 교안 '전자 기초 이론' 1장 구성을 따름)
+
+- layout: concept
+  title: 전류 — 전자의 흐름
+  visual: manim/p01_electron_flow
+  card:
+    symbol: I
+    name: 전류
+    eng: Current
+    unit: A  암페어
+    sub: ["1 mA = 1/1,000 A", "1 μA = 1/1,000,000 A"]
+    note: "1 A = 1초에 1쿨롬(C)의\n전하가 지나가는 양\n\n예) LED 1개 ≈ 20 mA"
+  chips:
+    - {visual: flow/p01_effect_heat, title: 열 작용, desc: 전등 · 전열기}
+    - {visual: flow/p01_effect_magnet, title: 자기 작용, desc: 전자석 · 모터}
+    - {visual: flow/p01_effect_chem, title: 화학 작용, desc: 충전 · 전기분해}
+  notes: |
+    정의: 도체 속 전자가 에너지를 얻어 이동하는 것 = 전류.
+    기호 I(Intensity), 단위 A(암페어). 아두이노 LED 하나에 흐르는 전류는 보통 10~20 mA.
+    전류가 흐르면 생기는 3가지 일: 열(전등·전열기), 자기(전자석·모터 — 로봇의 근육!), 화학(배터리 충전).
+
+- layout: concept
+  title: 전압 — 전자를 밀어주는 힘
+  visual: flow/p01_water_tank
+  card:
+    symbol: V
+    name: 전압
+    eng: Voltage
+    unit: V  볼트
+    sub: ["1 kV = 1,000 V", "1 mV = 1/1,000 V"]
+    note: "물탱크 높이 차가 클수록\n물이 세게 흐르듯,\n전압이 클수록 전류가 세다"
+  chips:
+    - {value: 1.5 V, title: 건전지, desc: AA · AAA}
+    - {value: 5 V, title: 아두이노·USB, desc: 실습에서 쓰는 전압}
+    - {value: 220 V, title: 가정용 콘센트, desc: ⚠ 위험! 실습 금지, warn: true}
+  notes: |
+    정의: 전자를 이동시켜 전류를 흐르게 하는 전기적인 압력. 기호 V, 단위 V(볼트).
+    교안의 정의 "1 C의 전하가 두 점 사이를 이동하며 1 J의 일을 할 때 = 1 V"는 참고로만 소개.
+    물 비유: 높은 탱크 → 낮은 탱크로 물이 흐른다. 높이 차 = 전압, 흐르는 물 = 전류.
+
+- layout: concept
+  title: 저항 — 전류를 방해하는 것
+  visual: manim/p01_resistance
+  card:
+    symbol: R
+    name: 저항
+    eng: Resistance
+    unit: Ω  옴
+    sub: ["1 kΩ = 1,000 Ω", "1 MΩ = 1,000,000 Ω"]
+    note: "1 V를 걸었을 때\n1 A가 흐르면 → 1 Ω"
+  chips:
+    - {value: 좁은 길, title: 저항 큼, desc: 전류가 적게 흐름}
+    - {value: 넓은 길, title: 저항 작음, desc: 전류가 많이 흐름}
+    - {value: 220 Ω, title: LED 보호 저항, desc: LED 앞에 꼭!}
+  notes: |
+    정의: 전류의 흐름을 방해하는 성분. 기호 R, 단위 Ω(옴).
+    영상 속 저항의 색띠(빨강·빨강·갈색·금)는 220 Ω — 실습에서 LED 앞에 꼭 다는 저항.
+    다음 시간: 전압·전류·저항의 관계 = 옴의 법칙 (I = V / R).
+
+- layout: three_cards
+  title: 전기가 잘 통하는 물질, 안 통하는 물질
+  cards:
+    - {visual: flow/p01_conductor, name: 도체, eng: Conductor, desc: 전기가 잘 통한다, ex: 은 · 구리 · 알루미늄 · 철 · 금}
+    - {visual: flow/p01_semiconductor, name: 반도체, eng: Semiconductor, desc: 조건에 따라 달라진다, ex: "실리콘(Si) · 게르마늄(Ge)\n→ 반도체 칩 · LED"}
+    - {visual: flow/p01_insulator, name: 절연체, eng: Insulator · 부도체, desc: 전기가 거의 안 통한다, ex: 고무 · 유리 · 운모 · 플라스틱}
+  scale: [잘 통한다 (저항 작음), 거의 안 통한다 (저항 큼)]
+  notes: |
+    저항의 크기(고유저항)에 따라 물질을 세 가지로 나눈다.
+    도체: 약 10⁻⁴ Ω·m 이하 / 절연체: 약 10⁷ Ω·m 이상 / 반도체: 그 사이.
+    전선 = 구리(도체) 심 + 플라스틱(절연체) 피복. 반도체는 2장(다이오드·트랜지스터)에서 자세히.

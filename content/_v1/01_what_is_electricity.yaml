@@ -1,0 +1,57 @@
+# 1장 「전기란 무엇인가」 — 맛보기 5장
+# layout: cover | section | figure_caption | video_caption | compare
+# visual 경로: flow/{id} → visuals/flow/images/{id}.png, manim/{id} → visuals/manim/out/{id}.mp4
+
+- layout: cover
+  title: 전자전기 기초
+  subtitle: 로봇을 움직이는 전기 이야기
+  meta: 청년 피지컬 AI · 비전공자를 위한 하루 특강
+  visual: flow/p00_cover
+  notes: |
+    오늘의 목표: 아두이노·센서·모터 실습 전에 '전기가 무엇인지' 그림으로 감 잡기.
+    수식은 최소한만. 질문은 언제든 환영한다고 말해 주기.
+
+- layout: section
+  number: "1장"
+  title: 전기란 무엇인가
+  subtitle: 눈에 보이지 않는 전기를 '그림'으로 이해하기
+  notes: |
+    "전기를 본 적 있나요?" 질문으로 시작 — 번개, 정전기 등 학생 경험을 끌어내기.
+
+- layout: figure_caption
+  title: 모든 물질은 '원자'로 되어 있다
+  visual: flow/p01_atom
+  caption: 원자 바깥을 도는 아주 작은 알갱이 = 전자(−). 전기의 주인공!
+  bullets:
+    - "원자핵 = 가운데의 무거운 덩어리\n거의 움직이지 않아요"
+    - "전자 = 바깥을 도는 작은 알갱이\n금속에선 자유롭게 움직여요"
+  notes: |
+    원자핵/전자 크기 비유: 원자가 축구장이라면 원자핵은 가운데 놓인 구슬 하나.
+    금속(구리 전선)은 전자가 잘 돌아다녀서 전기가 잘 통한다 → '도체'라는 말은 다음 장에서.
+
+- layout: video_caption
+  title: 전기 = 전자가 한 방향으로 움직이는 것
+  visual: manim/p01_electron_flow
+  caption: 스위치를 닫으면 전자가 한 방향으로 흐르고, 그 흐름이 전구를 켠다
+  notes: |
+    영상은 슬라이드가 열리면 자동 재생된다.
+    1) 스위치가 열려 있을 때: 전자는 제자리에서 꿈틀거릴 뿐 → 전구 꺼짐
+    2) 스위치를 닫으면: 전지가 전자를 밀어 한 방향 흐름이 생김 → 전구 켜짐
+    (심화) 교과서의 '전류 방향'은 전자 이동 방향과 반대로 약속되어 있다 — 2장에서 다룸.
+
+- layout: compare
+  title: 물로 생각하면 쉽다
+  left:
+    visual: flow/p01_water_pipe
+    label: 물이 흐르는 파이프
+  right:
+    visual: manim/p01_electron_flow
+    crop_top: 0.2   # 영상 속 자막 부분 잘라냄
+    label: 전자가 흐르는 전선
+  pairs:
+    - [펌프, 전지, 흐름을 밀어 주는 힘]
+    - [물, 전자, 실제로 움직이는 것]
+    - [물레방아, 전구, 흐름으로 일을 하는 곳]
+  notes: |
+    왼쪽(물)과 오른쪽(전기)을 짝지어 읽기. 이 비유는 2장에서 전압=물의 높이(압력),
+    전류=물의 양, 저항=좁은 파이프로 확장된다.
